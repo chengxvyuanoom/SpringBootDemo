@@ -21,6 +21,12 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
 @Configuration
 public class WebMvcConfig implements WebMvcConfigurer {
 
+
+    /**
+     * @return org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter
+     * @Description MessageConverters 消息转换器
+     * @Param []
+     **/
     @Bean("requestMappingHandlerAdapter1")
     public RequestMappingHandlerAdapter requestMappingHandlerAdapter() {
         RequestMappingHandlerAdapter adapter = new RequestMappingHandlerAdapter();

@@ -1,8 +1,8 @@
 package com.restservice.restService.api.controller;
 
-import com.restservice.restService.api.ao.ProductPararmeterAO;
-import com.restservice.restService.entity.ProductParameter;
-import com.restservice.restService.service.ProductService;
+import com.restservice.restService.api.ao.DemoParamAO;
+import com.restservice.restService.entity.DemoParameter;
+import com.restservice.restService.service.DemoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,17 +19,17 @@ import org.springframework.web.bind.annotation.RestController;
  * @Version 1.0
  **/
 @RestController
-@RequestMapping("/api/dp")
+@RequestMapping("/api/demo")
 @Api(value = "获取参数接口", tags = "获取参数接口")
-public class ProductController {
+public class DemoController {
 
     @Autowired
-    private ProductService productService;
+    private DemoService demoService;
 
     @ApiOperation(value = "获取参数")
     @RequestMapping(value = "/getParameters", method = RequestMethod.POST)
-    public ProductParameter greeting(@RequestParam String url, @RequestParam String parameterNames) {
-        ProductPararmeterAO productPararmeterAO = new ProductPararmeterAO(url, parameterNames);
-        return productService.getParameters(productPararmeterAO);
+    public DemoParameter greeting(@RequestParam String url, @RequestParam String parameterNames) {
+        DemoParamAO demoParamAO = new DemoParamAO(url, parameterNames);
+        return demoService.getParameters(demoParamAO);
     }
 }
