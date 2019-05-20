@@ -28,7 +28,6 @@ while [ $# -gt 0 ]; do
     shift
 done
 
-
 export JAVA_OPTIONS="-Xmx1024m -Xms1024m -Dcom.sun.management.jmxremote.port=22340 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false"
 export CLASSPATH=${CLASSPATH}:${DEPLOY_PATH}/resources:${DEPLOY_PATH}/lib/*
 export JAVA_DEBUG="-Xdebug -Xnoagent -Xrunjdwp:transport=dt_socket,address=${DEBUG_PORT},server=y,suspend=n"
@@ -36,7 +35,7 @@ export TIME_ZONE="-Duser.timezone=GMT+08"
 
 ${JAVA_HOME}/bin/java ${JAVA_OPTIONS} ${JAVA_DEBUG} ${TIME_ZONE}\
 -Dcom.dc.install_path=${DEPLOY_PATH}/resources \
--classpath ${CLASSPATH} com.edison.admin.AdminApplication $prog &
+-classpath ${CLASSPATH} com.restservice.restService.RestServiceApplication $prog &
 
 tail -F aaa
 
