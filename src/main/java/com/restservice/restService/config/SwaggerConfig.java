@@ -23,7 +23,7 @@ public class SwaggerConfig {
     /**
      * Swagger Title
      */
-    private static final String SWAGGER_TITLE = "微服务DemoAPI文档";
+    private static final String SWAGGER_TITLE = "SpringBootDemoAPI文档";
     /**
      * Swagger Description
      */

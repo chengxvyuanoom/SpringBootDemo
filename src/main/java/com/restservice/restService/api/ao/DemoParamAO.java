@@ -1,13 +1,13 @@
 package com.restservice.restService.api.ao;
 
 /**
- * @CLassName ProductPararmeterAO
+ * @CLassName DemoParamAO
  * @Description TODO
  * @Author goodman
  * @Date 2019-04-30 11:23
  * @Version 1.0
  **/
-public class ProductPararmeterAO {
+public class DemoParamAO {
 
     private String url;
     private String parameterNames;
@@ -28,10 +28,10 @@ public class ProductPararmeterAO {
         this.parameterNames = parameterNames;
     }
 
-    public ProductPararmeterAO() {
+    public DemoParamAO() {
     }
 
-    public ProductPararmeterAO(String url, String parameterNames) {
+    public DemoParamAO(String url, String parameterNames) {
         this.url = url;
         this.parameterNames = parameterNames;
     }
